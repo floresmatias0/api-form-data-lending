@@ -1,7 +1,7 @@
 const express = require('express')
 const server = express();
 const routes = require('./routes/index')
-
+const cors = require('cors')
 require('./db.js') 
 
 server.name = 'API';
@@ -17,7 +17,7 @@ server.use((req, res, next) => {
 });
 
 server.use('/', routes);
-
+server.use(cors())
 server.use((err, req, res, next) => { 
   const status = err.status || 500;
   const message = err.message || err;

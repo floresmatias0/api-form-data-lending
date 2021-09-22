@@ -3,21 +3,25 @@ const { DataTypes } = require('sequelize');
 module.exports = (sequelize) => {
 
     sequelize.define('user', {
-        email: {
+        nombre: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        name: {
+        apellido: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        mount: {
+        telefono: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
-        quotes: {
+        monto: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
+        cuotas: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        }
     });
 };

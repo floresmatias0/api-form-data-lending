@@ -1,12 +1,13 @@
 const { User } = require('../db.js')
 
 module.exports = {
-    createUser: async(email,name,mount,quotes) => {
+    createUser: async(nombre,apellido,telefono,monto,cuotas) => {
         return await User.create({
-            email,
-            name,
-            mount,
-            quotes
+            nombre,
+            apellido,
+            telefono,
+            monto,
+            cuotas
         })
     }
 }

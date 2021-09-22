@@ -2,8 +2,8 @@ const server = require('express').Router();
 const { createUser } = require('../../controllers/post.users')
 
 server.post('/create', (req, res, next) => { 
-    const { email,name,mount,quotes } = req.body
-    createUser(email,name,mount,quotes)
+    const { nombre,apellido,telefono,monto,cuotas } = req.body
+    createUser(nombre,apellido,telefono,monto,cuotas)
     .then(user => {
         res.status(201).json(user);
     }) 
